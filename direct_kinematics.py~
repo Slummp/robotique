@@ -17,4 +17,4 @@ def leg_dk(theta1, theta2, theta3, l1 = 51, l2 = 63.7, l3 = 93):
 
   z = math.cos(alpha) * l2 * math.sin(theta2) - math.cos(theta2) * math.sin(alpha) * l2 - math.cos(theta2) * math.cos(beta) * l3 + math.sin(theta2) * math.sin(beta) * l3
 
-  print("t1 = %d, t2 = %d, t3 = %d\nx = %d, y = %d et z = %d" % (theta1, theta2, theta3, x, y, z))
+  print("t1 = %.2f, t2 = %.2f, t3 = %.2f\nx = %.2f, y = %.2f et z = %.2f" % (theta1, theta2, theta3, x, y, z))
