@@ -10,11 +10,11 @@ def leg_dk(theta1, theta2, theta3, l1 = 51, l2 = 63.7, l3 = 93):
     alpha = radians(20.69)
     beta = radians(5.06)
 
-    newTheta2 = theta2 - alpha
-    newTheta3 = theta3 + beta
+    # newTheta2 = theta2 - alpha
+    # newTheta3 = theta3 + beta
 
-    # newTheta2 = theta2 + alpha
-    # newTheta3 = (pi / 2) - alpha - beta - theta3
+    newTheta2 = theta2 + alpha
+    newTheta3 = alpha + (pi / 2) + theta3 + beta
 
     P1 = {
         "x": cos(theta1) * l1,
