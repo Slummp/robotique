@@ -26,8 +26,8 @@
       <file leaf-file-name="direct_kinematics.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/direct_kinematics.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26232114">
-              <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="14" selection-end-column="50" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="38" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -143,7 +143,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/direct_kinematics.py</url>
-          <line>18</line>
+          <line>20</line>
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="1" />
@@ -161,8 +161,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/direct_kinematics.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26232114">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="14" selection-end-column="50" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="38" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
           <folding />
         </state>
       </provider>

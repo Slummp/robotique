@@ -1,3 +1,5 @@
+# Alexandre Brouste et Benjamin Bordel
+
 from math import *
 
 def leg_dk(theta1, theta2, theta3, l1 = 51, l2 = 63.7, l3 = 93):
