@@ -41,3 +41,4 @@ def al_kashi(angle, side1, side2):
 
 def inverse_al_kashi(opposite, side1, side2):
     return acos((side1**2 + side2**2 - opposite**2) / (2 * side1 * side2))
+    

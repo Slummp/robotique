@@ -36,7 +36,7 @@ def decode_data(data):
     return res
 
 def checksum(*args):
-    print hex( 0xFF & ~( sum(args)))
+    #print hex( 0xFF & ~( sum(args)))
     return hex( 0xFF & ~( sum(args))) 
 
 if __name__ == '__main__':
@@ -67,7 +67,7 @@ if __name__ == '__main__':
         data_checksum = checksum(data_id, data_lenght, data_instruction, data_param1, data_param2)
         data = to_hex(data_start) + to_hex(data_start) + to_hex(data_id) + to_hex(data_lenght) + \
         to_hex(data_instruction) + to_hex(data_param1) + to_hex(int(data_checksum, 16))
-        print data
+        #print data
         # print decode_data(data)
         write_data(serial_port, data)
         datas = read_data(serial_port, 6)
