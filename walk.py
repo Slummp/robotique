@@ -10,28 +10,6 @@ import signal
 
 global robot
 
-def moveLeg(leg, x, y, z, d=0.2):
-    motors = [m.name for m in leg]
-    print(leg)
-    cmd = dict(zip(motors, leg_ik(x,y,z)))    
-    robot.goto_position(cmd, d)
-
-
-def signal_handler(signal, frame):
-    print "Shutting down..."
-    time.sleep(1)
-    initRobot(-100)
-    time.sleep(1)
-    sys.exit(0)
-    
-def initRobot(hBase):
-    moveLeg(robot.leg1, 100, 0, hBase)
-    moveLeg(robot.leg2, 100, 0, hBase)
-    moveLeg(robot.leg3, 100, 0, hBase)
-    moveLeg(robot.leg4, 100, 0, hBase)
-    moveLeg(robot.leg5, 100, 0, hBase)
-    moveLeg(robot.leg6, 100, 0, hBase)
-
 if __name__ == '__main__':
     signal.signal(signal.SIGINT, signal_handler)
     

@@ -1,13 +1,15 @@
 import itertools
 import time
 import numpy
+import scipy
+import matplotlib
 import pypot.dynamixel
 from inverse_kinematics import * 
 
 if __name__ == '__main__':
 
     # we first open the Dynamixel serial port
-    with pypot.dynamixel.DxlIO('/dev/ttyUSB1', baudrate=1000000) as dxl_io:
+    with pypot.dynamixel.DxlIO('/dev/tty.usbserial-AH00RA8U', baudrate=1000000) as dxl_io:
         print "Scan des ids"
         
         # we can scan the motors
