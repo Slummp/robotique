@@ -10,7 +10,7 @@ import signal
 
 global robot
 
-def moveLeg(leg, x, y, z, d=2):
+def moveLeg(leg, x, y, z, d=0.3):
     motors = [m.name for m in leg]
     print(leg)
     cmd = dict(zip(motors, leg_ik(x,y,z)))    
@@ -47,7 +47,7 @@ if __name__ == '__main__':
         hDiff = 30
         step = 70
         
-        timeStep = 2
+        timeStep = 0.3
         initRobot(hBase)
         
         

@@ -32,6 +32,6 @@ def leg_dk(theta1, theta2, theta3, l1=51, l2=63.7, l3=93):
         "z": p2["z"] + sin(new_theta2 + new_theta3) * l3
     }
 
-    print("P1 : x:{x:.2f} y:{y:.2f} z:{z:.2f}".format(**p1))
-    print("P2 : x:{x:.2f} y:{y:.2f} z:{z:.2f}".format(**p2))
+    #print("P1 : x:{x:.2f} y:{y:.2f} z:{z:.2f}".format(**p1))
+    #print("P2 : x:{x:.2f} y:{y:.2f} z:{z:.2f}".format(**p2))
     print("P3 : x:{x:.2f} y:{y:.2f} z:{z:.2f}".format(**p3))

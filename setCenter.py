@@ -83,15 +83,15 @@ if __name__ == '__main__':
                     moving = 0
                     
                 if event.type == MOUSEMOTION and moving:
-                    x = event.pos[0]-250
-                    y = event.pos[1]-250
+                    x = (event.pos[0]-250) / 5
+                    y = (event.pos[1]-250) / 5
                     
                     print("SE DEPLACE ", x, y)
                     
                     moveCenter(x, y, hBase)
                     
-                    pygame.draw.circle(window, [200,10,30] ,(x+250,y+250),2,0)
+                    pygame.draw.circle(window, [abs(x)*5,abs(y)*5,abs(x)*2 + abs(y)*2] ,(event.pos[0],event.pos[1]),10,0)
                     pygame.display.flip()
-                    
+                time.sleep(0.0025)
         initRobot(hBase)
         
