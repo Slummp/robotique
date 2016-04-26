@@ -19,6 +19,7 @@ pygame.init()
 window = pygame.display.set_mode((500, 500))
 continuer = 1
 moving = 0
+pygame.draw.circle(window, [60, 60, 200] ,(250,250),250,0)
 pygame.draw.circle(window, [25, 25, 200] ,(250,250),5,0)
 pygame.display.flip()
 ###############################################################
@@ -34,25 +35,25 @@ def moveLeg(leg, x, y, z, d=0.0):
 
 def initRobot(hBase):
     moveLeg(robot.leg1, 100, 0, hBase)
-    moveLeg(robot.leg2, 100, 0, hBase)
-    moveLeg(robot.leg3, 100, 0, hBase)
+    moveLeg(robot.leg2, 80, 80, hBase)
+    moveLeg(robot.leg3, 80, -80, hBase)
     moveLeg(robot.leg4, 100, 0, hBase)
-    moveLeg(robot.leg5, 100, 0, hBase)
-    moveLeg(robot.leg6, 100, 0, hBase)
+    moveLeg(robot.leg5, 80, 80, hBase)
+    moveLeg(robot.leg6, 80, -80, hBase)
 
 def moveCenter(x, y, hBase):
     # Deplacer toutes les pattes
-    moveLeg(robot.leg1, -x + xBase, -y, hBase)
+    moveLeg(robot.leg1, -y + 100, -x, hBase, 1)
 
-    moveLeg(robot.leg4, x + xBase, y, hBase)
+    moveLeg(robot.leg4, y + 100, x, hBase, 1)
 
 
 
-    moveLeg(robot.leg2, x + xBase, -y, hBase)
-    moveLeg(robot.leg3, x + xBase, -y, hBase)
+    moveLeg(robot.leg2, x + 80, -y + 80, hBase, 1)
+    moveLeg(robot.leg3, x + 80, -y - 80, hBase, 1)
 
-    moveLeg(robot.leg5, -x + xBase, y, hBase)
-    moveLeg(robot.leg6, -x + xBase, y, hBase)
+    moveLeg(robot.leg5, -x + 80, y + 80, hBase, 1)
+    moveLeg(robot.leg6, -x + 80, y - 80, hBase, 1)
 ###############################################################
 
 
@@ -83,15 +84,15 @@ if __name__ == '__main__':
                     moving = 0
                     
                 if event.type == MOUSEMOTION and moving:
-                    x = event.pos[0]-250
-                    y = event.pos[1]-250
+                    x = (event.pos[0]-250) / 5
+                    y = (event.pos[1]-250) / 5
                     
                     print("SE DEPLACE ", x, y)
                     
                     moveCenter(x, y, hBase)
                     
-                    pygame.draw.circle(window, [200,10,30] ,(x+250,y+250),2,0)
+                    pygame.draw.circle(window, [abs(x)*5,abs(y)*5,abs(x)*2 + abs(y)*2] ,(event.pos[0],event.pos[1]),10,0)
                     pygame.display.flip()
-                    
+                time.sleep(0.0025)
         initRobot(hBase)
         

@@ -1,0 +1,89 @@
+\documentclass[ebook,12pt,oneside,openany]{memoir}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[french]{babel}
+\usepackage[babel=true]{csquotes}
+\usepackage{url}
+\usepackage{qtree}
+\usepackage[left=1.5cm,right=1.5cm,top=2cm,bottom=2cm, head=31pt]{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{titlesec}
+\usepackage{moreverb}
+\usepackage{alltt}
+\usepackage{array}
+
+\titleformat{\chapter}[hang]{\bfseries\huge}{}{2pc}{}
+\titleformat{\section}[hang]{\bfseries\Large}{}{2pc}{}
+
+\begin{document}
+
+\chapter{Cinématique Directe}
+
+\chapter{Cinématique Inverse}
+
+\section{Banalités...}
+
+  $\theta _{1} = \arctan{\frac{P_{3x}}{P_{3y}}}$\\
+
+  $L_{proj} = \sqrt{P_{3x}^{2} + P_{3y}^{2}}$\\
+  
+  $d_{13} = L_{proj} - L_{1}$\\
+  
+  $d = \sqrt{d_{13}^{2} + P_{3z}^{2}}$\\
+    
+  $a = \arctan{\frac{P_{3z}}{d_{13}}}$\\
+  
+  $b = \arccos{\frac{L_{2}^{2} + d^{2} - L_{3}^{2}}{2 \times L_{2} \times d}}$\\
+    
+\section{Partie 1 - Bras théorique}
+
+  \[
+   BrasTheorique_{cas1}
+    \left\{
+      \begin{array}{r c l}
+        \theta _{1} &=& \arctan{\frac{P_{3x}}{P_{3y}}}\\
+        \theta _{2} &=& a + b\\
+        \theta _{3} &=& \arccos{\frac{L_{2}^{2} + L_{3}^{2} - d^{2}}{2 \times L_{2} \times L_{3}}}\\
+      \end{array}
+    \right.
+  \]
+  
+  \[
+   BrasTheorique_{cas2}
+    \left\{
+      \begin{array}{r c l}
+        \theta _{1} &=& \arctan{\frac{P_{3x}}{P_{3y}}}\\
+        \theta _{2} &=& a - b\\
+        \theta _{3} &=& - \arccos{\frac{L_{2}^{2} + L_{3}^{2} - d^{2}}{2 \times L_{2} \times L_{3}}}\\
+      \end{array}
+    \right.
+  \]
+  
+\section{Partie 2 - Bras réél}
+
+  \[
+   BrasReel_{cas1}
+    \left\{
+      \begin{array}{r c l}
+        \theta _{1} &=& \arctan{\frac{P_{3x}}{P_{3y}}}\\
+        \theta _{2} &=& a + b - \alpha\\
+        \theta _{3} &=& \arccos{\frac{L_{2}^{2} + L_{3}^{2} - d^{2}}{2 \times L_{2} \times L_{3}}} + \beta\\
+      \end{array}
+    \right.
+  \]
+  
+  \[
+   BrasReel_{cas2}
+    \left\{
+      \begin{array}{r c l}
+        \theta _{1} &=& \arctan{\frac{P_{3x}}{P_{3y}}}\\
+        \theta _{2} &=& a - b - \alpha\\
+        \theta _{3} &=& - \arccos{\frac{L_{2}^{2} + L_{3}^{2} - d^{2}}{2 \times L_{2} \times L_{3}}} + \beta\\
+      \end{array}
+    \right.
+  \]
+
+\end{document}
